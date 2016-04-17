@@ -1,0 +1,11 @@
+<article>
+    <film-logo [height]="200" [width]="200"></film-logo>
+  <div *ngIf="film">
+    Title: {{ film.title }} <br />
+    Director {{ film.director }} <br /><br />
+    {{ film.opening_crawl }}
+    <br />
+    <br />
+    <a href="" [routerLink]="['Film']">Terug</a>
+</div>
+</article>

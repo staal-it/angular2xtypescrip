@@ -1,0 +1,15 @@
+<article>
+  <h4>My Films</h4>
+  <film-logo [height]="200" [width]="200"></film-logo>
+  <div>
+  Filter met event: <search-box (update)="term = $event"></search-box>
+  Simpele filter: <input type="text"  [(ngModel)]="term">
+  <ul class="films">
+    <li *ngFor="#film of films | search:term">
+      <a [routerLink]="['/Film', 'FilmDetail', {id: film.episode_id}]">
+       {{film.episode_id}}. {{film.title}}
+      </a>
+    </li>
+  </ul>
+  </div>
+</article>
